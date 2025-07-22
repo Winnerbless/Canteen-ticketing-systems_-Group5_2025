@@ -22,3 +22,10 @@
     line-height: 70px;
     color: #1c1b1a;
 }
+.navigation{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: #1c1b1a;
+}
