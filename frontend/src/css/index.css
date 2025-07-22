@@ -1,0 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,poppins;
+}
+.header{
+    width: 100;
+    height: 70px;
+    background-color:#EBEBEB ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img{
+    width: 70px;
+    height: 70px;
+    margin:;
+
+}
+.header h1{
+    line-height: 70px;
+    color: #1c1b1a;
+}
