@@ -1,0 +1,111 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
+}
+.header{
+    width: 100%;
+    height: 12%;
+    margin:0;
+    padding:10px ;
+    background: #1C1B1A;
+    display: flex;
+    font-family:'Poppins', sans-serif; 
+    color: #ebebeb;
+    font-size: x-large;
+   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
+    
+}
+.logo{
+    width: 90px; 
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+     margin-right: 10px;
+     display: block;
+}
+.dashboard {
+  display: flex;
+  height: 100vh;
+  position:absolute;
+}
+aside {
+    width: 250px;
+  background: #1C1B1A;
+background: linear-gradient(179deg, rgb(206, 107, 8) 0%, rgba(61, 65, 70, 1) 55%);
+    
+}
+.icons{
+    width: 30px;
+    height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: #110e0e;
+  font-family:  Sans""Segoe UI", "Roboto", "Open, sans-serif ;
+  margin: 10px 0;
+  transition: color 0.3s;
+  border-style: solid;
+  padding:8px;
+  margin: 3px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-color: #1c1b1a ;
+  
+}
+    aside nav a {
+        display: block;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: color 0.3s;
+
+}
+
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1C1B1A;
+    color:whitesmoke;
+    text-align: center;
+
+ 
+ }
+ .buton{
+    transition-duration: 0.4s;
+    padding: 0.3em 1.2em;
+    margin: 0.3em 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    font-family:Sans""Segoe UI", "Roboto", "Open, sans-serif ;
+    color: #1C1B1A;
+    
+    
+ }
+ .buton :hover{
+    background-color: rgb(16, 12, 20);
+ }
+ @media all and (max-width:30em){
+    a.buton{
+        display: block;
+        margin: 0.2em auto;
+    }
+ }
+  .main-content{
+background-image: url('/frontend/assets/image/eatsy-bg.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position:center;
+height: 100vh;
+margin: 0;
+width: 50vw;
+
+
+ }
