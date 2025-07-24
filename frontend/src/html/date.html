@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Dynamic Date</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="date.css">
+</head>
+<body>
+
+    <div class="date-container">
+        <p class="date-day" id="current-day"></p>
+        <p class="date-full" id="current-full-date"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<script>
+    function updateDateDisplay() {
+    const now = new Date();
+
+    // Options for the day of the week (e.g., "Thursday")
+    const dayOptions = { weekday: 'long' };
+    const dayOfWeek = now.toLocaleDateString('en-US', dayOptions); // 'en-US' for standard English weekday names
+
+    // Options for the full date (e.g., "July 24, 2025")
+    const fullDateOptions = {
+        month: 'long',   // Full month name (e.g., "July")
+        day: 'numeric',  // Day of the month (e.g., "24")
+        year: 'numeric'  // Full year (e.g., "2025")
+    };
+    const fullDate = now.toLocaleDateString('en-US', fullDateOptions);
+
+    // Update the HTML elements
+    document.getElementById('current-day').textContent = dayOfWeek;
+    document.getElementById('current-full-date').textContent = fullDate;
+}
+
+// Call the function once immediately to display the date without delay
+updateDateDisplay();
+
+// If you want it to update *live* (e.g., if the user leaves the tab open for days),
+// you could use setInterval, but for a date, it's usually not necessary as it only changes once a day.
+// If you want to include time, you would use setInterval:
+// setInterval(updateDateDisplay, 1000); // Updates every second for time display
+</script>
+</html>
