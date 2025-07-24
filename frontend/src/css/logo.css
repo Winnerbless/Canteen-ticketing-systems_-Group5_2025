@@ -35,7 +35,7 @@ body {
 .register-form button {
   width: 100%;
   padding: 12px;
-  background-color:#ffa60086;
+  background-color: #ffa60086;
   border: none;
   color: white;
   border-radius: 6px;
@@ -46,7 +46,7 @@ body {
 }
 
 .register-form button:hover {
-  background-color: #007bff;
+  background-color: #0056b3;
 }
 
 .login-link {
@@ -54,19 +54,10 @@ body {
   margin-top: 15px;
   font-size: 14px;
 }
-.left {
-    float: left;
- width: 50%;
-    display: block;
-}
-.right{
-    float: right;
 
-}
-  .right{
-    width: 50%;
-    display: block;
-  }  
+
+
+  
   .column {
     gap: 100px;
   }
@@ -75,7 +66,7 @@ body {
     height: 100px;
     display: block;
     margin: 0;
-    margin-right: 10px;
+    
     
     
 }
