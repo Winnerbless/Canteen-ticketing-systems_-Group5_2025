@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <link rel="stylesheet" href="../css/clock.css" />
+  </head>
+  <body>
+    <div class="date-container">
+      <p class="date-day" id="current-day"></p>
+      <p class="date-full" id="current-full-date"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      function updateDateDisplay() {
+        const now = new Date();
+
+        // Options for the day of the week (e.g., "Thursday")
+        const dayOptions = { weekday: "long" };
+        const dayOfWeek = now.toLocaleDateString("en-US", dayOptions); // 'en-US' for standard English weekday names
+
+        // Options for the full date (e.g., "July 24, 2025")
+        const fullDateOptions = {
+          month: "long", // Full month name (e.g., "July")
+          day: "numeric", // Day of the month (e.g., "24")
+          year: "numeric", // Full year (e.g., "2025")
+        };
+        const fullDate = now.toLocaleDateString("en-US", fullDateOptions);
+
+        // Update the HTML elements
+        document.getElementById("current-day").textContent = dayOfWeek;
+        document.getElementById("current-full-date").textContent = fullDate;
+      }
+
+      // Call the function once immediately to display the date without delay
+      updateDateDisplay();
+
+      // If you want it to update *live* (e.g., if the user leaves the tab open for days),
+      // you could use setInterval, but for a date, it's usually not necessary as it only changes once a day.
+      // If you want to include time, you would use setInterval:
+      // setInterval(updateDateDisplay, 1000); // Updates every second for time display
+    </script>
+    <div class="hero">
+      <div class="container">
+        <div class="clock">
+          <span id="hrs">00</span>
+          <span>: </span>
+          <span id="min">00</span>
+          <span>: </span>
+          <span id="sec">00</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      let hrs = document.getElementById("hrs");
+      let min = document.getElementById("min");
+      let sec = document.getElementById("sec");
+
+      setInterval(() => {
+        let currentTime = new Date();
+
+        hrs.innerHTML =
+          (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        min.innerHTML =
+          (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        sec.innerHTML =
+          (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>

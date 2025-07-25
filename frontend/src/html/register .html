@@ -3,27 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register</title>
+  <title>Add Consumption</title>
   <link rel="stylesheet" href="../css/resister.css">
-  <link rel="stylesheet" href="../vendor/bootstrap.min.css">
 </head>
 <body>
-  <div class="register-container">
-    <form class="register-form">
-        <div class="buton"><img src="/frontend/assets/image/icons/profile.png" alt="opps" class="icons"></div>
-      <h2>Add worker</h2>
-      <div class="column left"><input type="text" placeholder="Firstname" required /></div>
-        
-      <div class="columnn right"><input type="text" placeholder="Lastname" required /></div>
-     <div class="columnn left"><input type="Department" placeholder="Department" required /></div> 
-      <div class="columnn right"><input type="Date" placeholder="Date of birth" required /></div>
-      <div class="columnn left"><input type="Status" placeholder="Status" required/> </div>
-      <div class="columnn right"><input type="Gender" placeholder="Gender" required /></div>
+  <div class="container">
+    <form class="form">
+      <div class="avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Avatar">
+      </div>
+      <h2>Add Workers</h2>
+
+      <div class="row">
+        <div class="input-box">
+          <label for=" Firstname">Name</label>
+          <input type="text" id="name" placeholder="Firstname" required>
+        </div>
+         <div class="input-box">
+          <label for=" Lastname">Name</label>
+          <input type="text" id="name" placeholder="Lastname" required>
+        </div>
+      
+     <div class="row">
+        <div class="input-box">
+          <label for="department">Department</label>
+          <select id="department" required>
+            <option value="">Select department</option>
+            <option value="PDL">PDL</option>
+            <option value="Finishing">Finishing</option>
+            <option value="Security">Security</option>
+            <option value="Management">Management</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="date">Date of birth</label>
+          <input type="date" id="date" placeholder="Date of birth " required>
+        </div>
+     </div>
+      
+
+      <div class="row">
+        <div class="input-box">
+          <label for="status">Status</label>
+          <select id="status" required>
+            <option value="">Select status</option>
+            <option value="Permenet">Permenet</option>
+            <option value="Temporal">Temporal</option>
+            <option value="Intern">Intern</option>
+          </select>
+        </div>
+         
+      </div>
+      <div class="row"><div class="input-box">
+          <label for="Gender">Gender</label>
+           <select id="Gender" required>
+            <option value="">Gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
+        </div>
+    </div>
+      
+
+      
+       
+      
+
       <button type="submit">Register</button>
-      
-      
     </form>
   </div>
 </body>
 </html>
- 
+
+
