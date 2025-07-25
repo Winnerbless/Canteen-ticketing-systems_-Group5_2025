@@ -8,9 +8,8 @@
   width: 100%;
   height: 100px;
   margin: 0;
-  padding: 10px;
-  background: #1c1b1a;
-  background: rgb(206, 107, 8);
+  padding: 20px;
+  background-color: #06373d;
   display: flex;
   font-family: "Poppins", sans-serif;
   color: #ebebeb;
@@ -23,7 +22,8 @@
   width: 350px;
   height: px;*/
   margin: 0;
-  padding: 0;
+  margin-left: 60%;
+  display: flex;
 }
 .logo {
   width: 80px;
@@ -46,8 +46,13 @@ aside {
   height: 100%;
   width: 250px;
   margin-top: 100px;
-  background: #1c1b1a;
-  background: linear-gradient(179deg, rgb(206, 107, 8) 0%, rgb(17, 18, 20) 55%);
+  background: #2b2d31;
+  background: #2b2d31;
+  background: linear-gradient(
+    180deg,
+    rgba(43, 45, 49, 1) 48%,
+    rgba(137, 147, 158, 1) 78%
+  );
 }
 .icons {
   width: 30px;
@@ -71,9 +76,11 @@ aside a {
   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);
 }
 aside a :hover {
-  background-color: #1c1b1a;
+  background-color: ;
   color: #ebebeb;
+  transform: scale(0.5);
   border-color: #1c1b1a;
+  padding: 0;
 }
 
 .footer {
@@ -81,7 +88,7 @@ aside a :hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1c1b1a;
+  background-color: #2b2d31;
   color: #ebebeb;
   text-align: center;
   height: 25px;
@@ -112,8 +119,20 @@ aside a :hover {
   width: 800px;
   height: 400px;
 }
+.search {
+  border-radius: 10px;
+  border-style: solid;
+  margin-left: 70%;
+  padding: 4px;
+  text-align: center;
+  border-color: #2b2d31;
+  background-color: #89939e;
+}
+::placeholder {
+  color: #ebebeb;
+}
 .background {
-  background-image: url("/frontend/assets/image/logo/eatsyback.png");
+  background-image: url("/frontend/assets/image/logo/back.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
