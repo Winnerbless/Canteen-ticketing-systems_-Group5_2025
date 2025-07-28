@@ -15,9 +15,13 @@
       <div class="header">
         <img src="/frontend/assets/image/logo/eatsy 1 (1).png" class="logo" />
         <h1>Eatsy</h1>
+        <!-- The date and time -->
         <div class="time">
+          <div class="date-container">
+            <p class="date-day" id="current-day"></p>
+            <p class="date-full" id="current-full-date"></p>
+          </div>
           <iframe src="clock.html" class="real"></iframe>
-          <!-- <iframe src="date.html" class="date"></iframe> -->
         </div>
       </div>
     </section>
@@ -36,28 +40,10 @@
         <a href="/frontend/src/html/register .html"
           ><div class=".btn-block">
             <img
-              src="/frontend/assets/image/icons/add new worker.png"
-              alt="opps"
-              class="icons"
-            />Add new worker
-          </div></a
-        >
-        <a href="/frontend/src/html/register .html"
-          ><div class=".btn-block">
-            <img
               src="/frontend/assets/image/icons/consumption table.png"
               alt="opps"
               class="icons"
             />Consumption table
-          </div></a
-        >
-        <a href="/frontend/src/html/register .html"
-          ><div class=".btn-block">
-            <img
-              src="/frontend/assets/image/icons/register consumption.png"
-              alt="opps"
-              class="icons"
-            />Register consumption
           </div></a
         >
         <a href="/frontend/src/html/register .html"
@@ -82,12 +68,6 @@
       <!-- The main page -->
       <main class="main-content">
         <div class="content">
-          <input
-            type="search"
-            placeholder="search here"
-            class="search"
-            autocomplete="off"
-          />
           <div class="background">
             <!-- the content here -->
             <div></div>
@@ -101,4 +81,5 @@
     </div>
   </body>
   <script src="../js/registerWorkers.js"></script>
+  <script src="../js/date.js"></script>
 </html>

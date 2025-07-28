@@ -18,11 +18,9 @@
   position: fixed;
 }
 .time {
-  /* border: 1px solid #ccc;
-  width: 350px;
-  height: px;*/
+  padding: 0;
   margin: 0;
-  margin-left: 60%;
+  margin-left: 50%;
   display: flex;
 }
 .logo {
@@ -76,7 +74,6 @@ aside a {
   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);
 }
 aside a :hover {
-  background-color: ;
   color: #ebebeb;
   transform: scale(0.5);
   border-color: #1c1b1a;
@@ -119,18 +116,6 @@ aside a :hover {
   width: 800px;
   height: 400px;
 }
-.search {
-  border-radius: 10px;
-  border-style: solid;
-  margin-left: 70%;
-  padding: 4px;
-  text-align: center;
-  border-color: #2b2d31;
-  background-color: #89939e;
-}
-::placeholder {
-  color: #ebebeb;
-}
 .background {
   background-image: url("/frontend/assets/image/logo/back.png");
   background-repeat: no-repeat;
@@ -140,9 +125,12 @@ aside a :hover {
   height: 400px;
   width: 500px;
 }
-.welcome {
-  font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
-  color: #1c1b1a;
-  text-align: center;
-  transition: ease-in-out;
+.date-container p {
+  font-size: 25px;
+  padding: 2px;
+}
+.date-container {
+  display: flex;
+  width: 240px;
+  height: 60px;
 }
