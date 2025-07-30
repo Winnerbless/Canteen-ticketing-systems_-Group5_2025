@@ -22,8 +22,8 @@ body {
       padding: 5px;
     }
     .header {
-         background:linear-gradient(180deg, #4B2E8C,#2D2D8A);
-      color: #E4572E;
+         background:linear-gradient(180deg, #2E4E3F);
+      color: #C8AE70;
       font-weight: 700;
       padding: 10px 20px;  
     }
@@ -61,7 +61,7 @@ body {
 }
 
 .head th{
-  background-color: #E4572E;
+  background-color: #C8AE70;
 }
 
 span{
@@ -75,7 +75,7 @@ span{
   align-items: center;
   padding: 12px 16px;
   margin-bottom: 12px;
-  border: 2px solid #e4572e;
+  border: 2px solid #C8AE70;
   border-radius: 8px;
   background: #fff;
   color: #031046;
@@ -93,7 +93,7 @@ span{
 }
 
 .sidebar-link:hover {
-  background: #e4572e;
+  background: #DAA520;
   color: #fff;
   text-decoration: none;
 }
@@ -112,7 +112,7 @@ span{
 
 .home-card {
   background: #fff;
-  border: 2px solid #e4572e;
+  border: 2px solid #C8AE70;
   border-radius: 12px;
   width: 200px;
   height: 140px;
@@ -141,7 +141,7 @@ span{
 
 .home-card .card-value {
   font-size: 1.2rem;
-  color: #e4572e;
+  color: #C8AE70;
   margin-top: 8px;
   font-weight: bold;
 }

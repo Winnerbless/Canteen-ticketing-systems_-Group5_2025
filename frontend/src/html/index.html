@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/display-workers.css">
-  <title>SIPS & BITES | Landing Page</title>
+  <title>EATSY| Landing Page</title>
   <!--<link rel="stylesheet" href="../vendor/all.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
@@ -16,12 +16,9 @@
   <!-- Header -->
   <header class="header d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
-      <img src="../../asset/logo/IMG-logo.jpg" height="50px" width="50px" class="rounded-circle" alt="Logo"
+      <img src="../../asset/logo/eatsy 1 (1).png" height="50px" width="50px" class="rounded-circle" alt="Logo"
         class="me-2">
-      <h1 class="mb-0" style="margin-left: 300px;">SIPS & BITES</h1>
-    </div>
-    <div>
-      <img src="../../asset/logo/profile.png" height="50px" width="50px" class="rounded-circle" Icon class="ms-3">
+      <h1 class="mb-0" style="margin-left: 300px;">EATSY</h1>
     </div>
   </header>
 
@@ -36,7 +33,7 @@
           <i class="fa fa-user-plus"></i> Register Worker
         </a>
         <a href="#" onclick="showSection('worker-list'); listWorkers()" class="sidebar-link">
-          <i class="fa fa-users"></i> Worker List
+          <i class="fa fa-users"></i> worker list
         </a>
         <a href="#" onclick="showSection('register-consumption');" class="sidebar-link">
           <i class="fa fa-utensils"></i> Register Consumption
@@ -53,25 +50,25 @@
         <!-- Section Accueil -->
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="home-section" style="display: none;">
-          <h2 style="text-align: center; color: #E4572E;">Home Page</h2>
+          <h2 style="text-align: center; color: #2E4E3F;">Home Page</h2>
           <div class="home-cards">
             <div class="home-card">
               <div class="card-body">
-                <i class="fa fa-users fa-2x" style="color:#e4572e;"></i>
+                <i class="fa fa-users fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Number of workers</div>
                 <div class="card-value">25</div>
               </div>
             </div>
             <div class="home-card">
               <div class="card-body">
-                <i class="fa fa-money-bill-wave fa-2x" style="color:#e4572e;"></i>
+                <i class="fa fa-money-bill-wave fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Number of Dept</div>
                 <div class="card-value">5</div>
               </div>
             </div>
             <div class="home-card">
               <div class="card-body">
-                <i class="fa fa-coins fa-2x" style="color:#e4572e;"></i>
+                <i class="fa fa-coins fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Total Amount</div>
                 <div class="card-value">100,000 XAF</div>
               </div>
@@ -80,9 +77,9 @@
         </div>
 
         <!-- Section Register Worker -->
-        <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
+ <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-worker" style="display: none;">
-          <h2 style="text-align: center; color: #E4572E;">Register Worker</h2>
+          <h2 style="text-align: center; color: #C8AE70;">Register Worker</h2>
           <!-- À placer dans la section Register Worker ou ailleurs -->
           <form>
             <div class="row mb-3">
@@ -135,15 +132,16 @@
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
               <button type="submit" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: blue; margin-top: 40px; margin-left: 200px;">Submit</button>
+                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;">Submit</button>
             </div>
           </form>
         </div>
 
         <!-- Register consumption -->
-        <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
+        
+       <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-consumption" style="display: none;">
-          <h2 style="text-align: center; color: #E4572E;">Register consumption</h2>
+          <h2 style="text-align: center; color:  #C8AE70;">Register consumption</h2>
           <form action="">
             <div class="row mb-3">
               <div class="col">
@@ -185,7 +183,7 @@
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
               <input type="button" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: #E4572E; margin-top: 40px; margin-left: 200px;" value="Submit">
+                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;" value="Submit">
             </div>
           </form>
         </div>
@@ -194,19 +192,19 @@
         <!-- Exemple à placer dans la section "worker-list-section" -->
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="worker-list" style="display: none;">
-          <h2 style="text-align: center; color: #E4572E;">List Workers</h2>
+          <h2 style="text-align: center; color: #C8AE70;">List Workers</h2>
           <table class="table table-bordered worker-table">
             <thead>
               <tr>
-                <th style="background-color: #E4572E;">Num</th>
-                <th style="background-color: #E4572E;">Name</th>
-                <th style="background-color: #E4572E;">Surname</th>
-                <th style="background-color: #E4572E;">Departement</th>
-                <th style="background-color: #E4572E;">Status</th>
-                <th style="background-color: #E4572E;">Date of Birth</th>
-                <th style="background-color: #E4572E;">Place of Birth</th>
-                <th style="background-color: #E4572E;">Registration Date</th>
-                <th style="background-color: #E4572E;">Actions</th>
+                <th style="background-color:  #C8AE70;">Num</th>
+                <th style="background-color: #C8AE70;">Name</th>
+                <th style="background-color:  #C8AE70;">Surname</th>
+                <th style="background-color:  #C8AE70;">Departement</th>
+                <th style="background-color: #C8AE70 ;">Status</th>
+                <th style="background-color:  #C8AE70;">Date of Birth</th>
+                <th style="background-color:  #C8AE70;">Place of Birth</th>
+                <th style="background-color: #C8AE70;">Registration Date</th>
+                <th style="background-color:  #C8AE70;">Actions</th>
               </tr>
             </thead>
             <tbody id="workerLists">
@@ -219,16 +217,16 @@
 
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="display-worker-debts" style="display: none;">
-          <h2 style="text-align: center; color: #E4572E;">Display workers depts</h2>
+          <h2 style="text-align: center; color:  #C8AE70;">Display workers depts</h2>
           <table class="table table-bordered worker-table">
             <thead>
               <tr id="head">
-                <th style="background-color: #E4572E;">Num</th>
-                <th style="background-color: #E4572E;">Name</th>
-                <th style="background-color: #E4572E;">Departement</th>
-                <th style="background-color: #E4572E;">Consumption</th>
-                <th style="background-color: #E4572E;">Extra</th>
-                <th style="background-color: #E4572E;">Total amount</th>
+                <th style="background-color:  #C8AE70;">Num</th>
+                <th style="background-color:  #C8AE70;">Name</th>
+                <th style="background-color:  #C8AE70;">Departement</th>
+                <th style="background-color:  #C8AE70;">Consumption</th>
+                <th style="background-color:  #C8AE70;">Extra</th>
+                <th style="background-color:  #C8AE70;">Total amount</th>
               </tr>
             </thead>
             <tbody>
@@ -253,7 +251,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer"> <span> &copy; 2025 SPS & BITS</span></footer>
+  <footer class="footer"> <span> &copy; 2025 EATSY</span></footer>
 </body>
 
 </html>
