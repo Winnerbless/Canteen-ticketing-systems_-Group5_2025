@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <link rel="stylesheet" href="../css/clock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+        <span id="hrs">00</span>
+        <span>: </span>
+        <span id="min">00</span>
+        <span>: </span>
+        <span id="sec">00</span>
+      </div>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      }
+
+      .container {
+        width: 200px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .clock {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: center;
+        /* From https://css.glass */
+        background: rgba(28, 27, 26, 0.18);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.4px);
+        -webkit-backdrop-filter: blur(1.4px);
+        border: 1px solid #f3d89a;
+        padding: 10px;
+      }
+      .clock span {
+        font-size: 20px;
+        color: #ebebeb;
+        width: 100px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+      }
+      #hrs::after {
+        content: "Hours";
+        font-size: 10px;
+        display: flex;
+      }
+      #min::after {
+        content: "Minutes";
+        font-size: 10px;
+        display: flex;
+      }
+      #sec::after {
+        content: "Second";
+        font-size: 10px;
+        display: flex;
+      }
+    </style>
+    <script>
+      let hrs = document.getElementById("hrs");
+      let min = document.getElementById("min");
+      let sec = document.getElementById("sec");
+
+      setInterval(() => {
+        let currentTime = new Date();
+
+        hrs.innerHTML =
+          (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        min.innerHTML =
+          (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        sec.innerHTML =
+          (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>

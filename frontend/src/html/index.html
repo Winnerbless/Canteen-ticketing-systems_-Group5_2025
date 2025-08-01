@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/display-workers.css">
-  <title>EATSY| Landing Page</title>
+  <title><link rel="icon" href="/Frontend/asset/logo/eatsy 1 (1).png" type="image/png">EATSY</title>
   <!--<link rel="stylesheet" href="../vendor/all.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
@@ -16,9 +16,15 @@
   <!-- Header -->
   <header class="header d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
-      <img src="../../asset/logo/eatsy 1 (1).png" height="50px" width="50px" class="rounded-circle" alt="Logo"
+      <img src="../../asset/logo/eatsy 1 (1).png" class="logo" alt="Logo"
         class="me-2">
-      <h1 class="mb-0" style="margin-left: 300px;">EATSY</h1>
+      <h1 class="eatsy">EATSY</h1>
+       <div class="time">
+          <div class="date-container">
+            <p class="date-day" id="current-day"></p>
+            <p class="date-full" id="current-full-date"></p>
+          </div>
+       <iframe src="clock.html" class="real"></iframe>
     </div>
   </header>
 
@@ -28,9 +34,6 @@
       <nav class="sidebar" id="sidebar-menu">
         <a href="#" onclick="showSection('home-section')" class="sidebar-link">
           <i class="fa fa-home"></i> Home
-        </a>
-        <a href="#" onclick="showSection('register-worker')" class="sidebar-link">
-          <i class="fa fa-user-plus"></i> Register Worker
         </a>
         <a href="#" onclick="showSection('worker-list'); listWorkers()" class="sidebar-link">
           <i class="fa fa-users"></i> worker list
@@ -80,16 +83,17 @@
  <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-worker" style="display: none;">
           <h2 style="text-align: center; color: #C8AE70;">Register Worker</h2>
-          <!-- À placer dans la section Register Worker ou ailleurs -->
+          <img  src ="../../asset/logo/profile.png" height="100px" width="100px" class="profile" alt="profile">
+          <!--place to register worker -->
           <form>
             <div class="row mb-3">
               <div class="col">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">First Name</label>
                 <input type="text" id="name" class="form-control" placeholder="Name">
               </div>
               <div class="col">
-                <label for="giving-name" class="form-label">Giving Name</label>
-                <input type="text" id="givingName" class="form-control" placeholder="Giving Name">
+                <label for="giving-name" class="form-label">Last Name</label>
+                <input type="text" id="givingName" class="form-control" placeholder="Last Name">
               </div>
             </div>
             <div class="row mb-3">
@@ -132,7 +136,7 @@
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
               <button type="submit" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;">Submit</button>
+                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;">Submit</button>
             </div>
           </form>
         </div>
@@ -141,6 +145,7 @@
         
        <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-consumption" style="display: none;">
+           <img src="../../asset/logo/profile.png" height="100px" width="100px" class="rounded-circle" alt="profile">
           <h2 style="text-align: center; color:  #C8AE70;">Register consumption</h2>
           <form action="">
             <div class="row mb-3">
@@ -183,7 +188,7 @@
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
               <input type="button" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;" value="Submit">
+                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;" value="Submit">
             </div>
           </form>
         </div>
@@ -193,6 +198,9 @@
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="worker-list" style="display: none;">
           <h2 style="text-align: center; color: #C8AE70;">List Workers</h2>
+          <a href="#" onclick="showSection('register-worker')" class="sidebar-link">
+          <i class="fa fa-user-plus"></i> Register Worker
+        </a>
           <table class="table table-bordered worker-table">
             <thead>
               <tr>
@@ -232,11 +240,11 @@
             <tbody>
               <tr class="worker-row">
                 <td>1</td>
-                <td>John Doe</td>
-                <td>PDL</td>
-                <td>3</td>
-                <td>2</td>
-                <td>5000 XAF</td>
+                <td>Lisa Rose</td>
+                <td>Maketong</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3000 XAF</td>
               </tr>
               <!-- Ajoute d'autres lignes ici -->
             </tbody>
@@ -253,14 +261,13 @@
   <!-- Footer -->
   <footer class="footer"> <span> &copy; 2025 EATSY</span></footer>
 </body>
-
-</html>
 <script src="../js/index.js"></script>
 <script src="../js/registerworker.js"></script>
 <script src="../js/db.js"></script>
 <script src="../js/depatement.js"></script>
 <script src="../js/consumption.js"></script>
-
+<script src="../js/date.js"></script>
+<script src="../js/indexdb.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var today = new Date();
@@ -272,3 +279,5 @@
     if (rgdate) rgdate.value = formatted;
   });
 </script>
+</html>
+
