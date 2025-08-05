@@ -75,8 +75,7 @@ aside a {
 }
 aside a :hover {
   color: #ebebeb;
-  transform: scale(0.5);
-  border-color: #1c1b1a;
+  transform: scale(0.9);
   padding: 0;
 }
 
