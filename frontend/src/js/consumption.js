@@ -1,13 +1,13 @@
 function saveConsumptionData(){
-    var chooseDepartment = document.getElementById("departement-consumption").value;
-     var  chooseWorker= document.getElementById("worker").value;
+    var departement = document.getElementById("departement-consumption").value;
+     var  consumerName= document.getElementById("worker").value;
       var consumptionType = document.getElementById("consumption-type").value;
-       var  numberOfExtraConsumption= document.getElementById("extra").value;
-        var  registerationDate= document.getElementById("rgdate").value;
-         var amountConsumed = document.getElementById("amount-consummed").value;
+       var  exta= document.getElementById("extra").value;
+        var  date= document.getElementById("rgdate").value;
+         var amount = document.getElementById("amount-consummed").value;
 
 
-        var consumptionData = {chooseDepartment, chooseWorker, consumptionType, numberOfExtraConsumption, registerationDate, amountConsumed };
+        var consumptionData = {departement, consumerName, consumptionType,exta , date, amount };
 
         console.log(consumptionData);
 
@@ -51,7 +51,7 @@ function saveConsumptionData(){
                 row.insertCell(3).innerText = consumption.department;
                 row.insertCell(4).innerText =consumption.consumption;
                 row.insertCell(5).innerText = consumption.extra;
-                 row.insertCell(5).innerText = consumption.amount;
+                row.insertCell(6).innerText = consumption.amount;
 
 
 

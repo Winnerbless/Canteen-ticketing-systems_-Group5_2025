@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/display-workers.css">
-  <title>EATSY| Landing Page</title>
+  <title><link rel="icon" href="/Frontend/asset/logo/eatsy 1 (1).png" type="image/png">EATSY</title>
   <!--<link rel="stylesheet" href="../vendor/all.min.css"> -->
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -15,9 +15,15 @@
   <!-- Header -->
   <header class="header d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center">
-      <img src="../../asset/logo/eatsy 1 (1).png" height="50px" width="50px" class="rounded-circle" alt="Logo"
+      <img src="../../asset/logo/eatsy 1 (1).png" class="logo" alt="Logo"
         class="me-2">
-      <h1 class="mb-0" style="margin-left: 300px;">EATSY</h1>
+      <h1 class="eatsy">EATSY</h1>
+       <div class="time">
+          <div class="date-container">
+            <p class="date-day" id="current-day"></p>
+            <p class="date-full" id="current-full-date"></p>
+          </div>
+       <iframe src="clock.html" class="real"></iframe>
     </div>
   </header>
 
@@ -76,16 +82,17 @@
           class="container p-2 border rounded bg-light shadow" id="register-worker" style="display: none;">
           <img src ="../../asset/logo/profile.png" height="100px" width="100px" class="rounded-circle" alt="profile">
           <h2 style="text-align: center; color: #C8AE70;">Register Worker</h2>
-          <!-- À placer dans la section Register Worker ou ailleurs -->
+          <img  src ="../../asset/logo/profile.png" height="100px" width="100px" class="profile" alt="profile">
+          <!--place to register worker -->
           <form>
             <div class="row mb-3">
               <div class="col">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">First Name</label>
                 <input type="text" id="name" class="form-control" placeholder="Name">
               </div>
               <div class="col">
-                <label for="giving-name" class="form-label">Giving Name</label>
-                <input type="text" id="givingName" class="form-control" placeholder="Giving Name">
+                <label for="giving-name" class="form-label">Last Name</label>
+                <input type="text" id="givingName" class="form-control" placeholder="Last Name">
               </div>
             </div>
             <div class="row mb-3">
@@ -127,8 +134,8 @@
             </div>
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
-              <input type="button" onclick="saveWorkerData();" class="btn w-50"
-                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;" value="Save">
+              <button type="submit" onclick="submitWorkersData()" class="btn w-50"
+                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;">Submit</button>
             </div>
           </form>
         </div>
@@ -259,8 +266,6 @@
   <!-- Footer -->
   <footer class="footer"> <span> &copy; 2025 EATSY</span></footer>
 </body>
-
-</html>
 <script src="../js/index.js"></script>
 <script src="../js/db.js"></script>
 <script src="../js/depatement.js"></script>
@@ -279,3 +284,5 @@
     if (rgdate) rgdate.value = formatted;
   });
 </script>
+</html>
+
