@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../css/display-workers.css">
   <title>EATSY| Landing Page</title>
   <!--<link rel="stylesheet" href="../vendor/all.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -27,16 +26,12 @@
     <div class="sidebar-container">
       <nav class="sidebar" id="sidebar-menu">
         <a href="#" onclick="showSection('home-section')" class="sidebar-link">
-          <i class="fa fa-home"></i> Home
-        </a>
-        <a href="#" onclick="showSection('register-worker')" class="sidebar-link">
-          <i class="fa fa-user-plus"></i> Register Worker
+          <i class="fa fa-home"></i> Home</a>
+          <a href="#" onclick="showSection('register-consumption');" class="sidebar-link">
+          <i class="fa fa-utensils"></i> Register Consumption
         </a>
         <a href="#" onclick="showSection('worker-list'); listWorkers()" class="sidebar-link">
           <i class="fa fa-users"></i> worker list
-        </a>
-        <a href="#" onclick="showSection('register-consumption');" class="sidebar-link">
-          <i class="fa fa-utensils"></i> Register Consumption
         </a>
         <a href="#" onclick="showSection('display-worker-debts')" class="sidebar-link">
           <i class="fa fa-money-bill-wave"></i> Display Worker Debts
@@ -56,21 +51,21 @@
               <div class="card-body">
                 <i class="fa fa-users fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Number of workers</div>
-                <div class="card-value">25</div>
+                <div class="card-value">15</div>
               </div>
             </div>
             <div class="home-card">
               <div class="card-body">
                 <i class="fa fa-money-bill-wave fa-2x" style="color: #2E4E3F;"></i>
-                <div class="card-title">Number of Dept</div>
-                <div class="card-value">5</div>
+                <div class="card-title">Available Debts</div>
+                <div class="card-value">0</div>
               </div>
             </div>
             <div class="home-card">
               <div class="card-body">
                 <i class="fa fa-coins fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Total Amount</div>
-                <div class="card-value">100,000 XAF</div>
+                <div class="card-value">5000 XAF</div>
               </div>
             </div>
           </div>
@@ -79,6 +74,7 @@
         <!-- Section Register Worker -->
  <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-worker" style="display: none;">
+          <img src ="../../asset/logo/profile.png" height="100px" width="100px" class="rounded-circle" alt="profile">
           <h2 style="text-align: center; color: #C8AE70;">Register Worker</h2>
           <!-- À placer dans la section Register Worker ou ailleurs -->
           <form>
@@ -95,7 +91,7 @@
             <div class="row mb-3">
               <div class="col">
                 <label for="departement" class="form-label">Departement</label>
-                <select id="departement" class="form-select">
+                <select id="department" class="form-select">
                 </select>
               </div>
               <div class="col">
@@ -131,8 +127,8 @@
             </div>
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
-              <button type="submit" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;">Submit</button>
+              <input type="button" onclick="saveWorkerData();" class="btn w-50"
+                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;" value="Save">
             </div>
           </form>
         </div>
@@ -141,6 +137,7 @@
         
        <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 90%;"
           class="container p-2 border rounded bg-light shadow" id="register-consumption" style="display: none;">
+           <img src="../../asset/logo/profile.png" height="100px" width="100px" class="rounded-circle" alt="profile">
           <h2 style="text-align: center; color:  #C8AE70;">Register consumption</h2>
           <form action="">
             <div class="row mb-3">
@@ -182,27 +179,32 @@
             </div>
             <!-- Ajoute d'autres champs ou boutons ici -->
             <div class="btn-gradient">
-              <input type="button" onclick="submitWorkersData()" class="btn w-50"
-                style="background-color: #DAA520; margin-top: 40px; margin-left: 200px;" value="Submit">
+              <input type="button"  onclick="saveConsumptionData()" class="btn w-50"
+                style="background-color: #2E4E3F; margin-top: 40px; margin-left: 200px;" value="Submit">
             </div>
           </form>
         </div>
 
         <!-- Workers list -->
         <!-- Exemple à placer dans la section "worker-list-section" -->
+      
+          
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="worker-list" style="display: none;">
-          <h2 style="text-align: center; color: #C8AE70;">List Workers</h2>
+          <a href="#" onclick="showSection('register-worker')" class="sidebar-link">
+          <i class="fa fa-user-plus"></i> Register Worker
+        </a>  
+          <h2 style="text-align: center; color: #C8AE70;">List Workers</h2>   
           <table class="table table-bordered worker-table">
             <thead>
               <tr>
                 <th style="background-color:  #C8AE70;">Num</th>
                 <th style="background-color: #C8AE70;">Name</th>
-                <th style="background-color:  #C8AE70;">Surname</th>
+                <th style="background-color:  #C8AE70;">Giving Name</th>
                 <th style="background-color:  #C8AE70;">Departement</th>
                 <th style="background-color: #C8AE70 ;">Status</th>
-                <th style="background-color:  #C8AE70;">Date of Birth</th>
-                <th style="background-color:  #C8AE70;">Place of Birth</th>
+                <th style="background-color: #C8AE70 ;">Date of Birth</th>
+                <th style="background-color: #C8AE70 ;">Place of Birth</th>
                 <th style="background-color: #C8AE70;">Registration Date</th>
                 <th style="background-color:  #C8AE70;">Actions</th>
               </tr>
@@ -217,26 +219,30 @@
 
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="display-worker-debts" style="display: none;">
+           <a href="#" onclick="showSection('register-consumption');" class="sidebar-link">
+          <i class="fa fa-utensils"></i> Register Consumption
+        </a>
           <h2 style="text-align: center; color:  #C8AE70;">Display workers depts</h2>
           <table class="table table-bordered worker-table">
             <thead>
               <tr id="head">
                 <th style="background-color:  #C8AE70;">Num</th>
                 <th style="background-color:  #C8AE70;">Name</th>
+                <th style="background-color:  #C8AE70;">Giving Name</th>
                 <th style="background-color:  #C8AE70;">Departement</th>
                 <th style="background-color:  #C8AE70;">Consumption</th>
                 <th style="background-color:  #C8AE70;">Extra</th>
                 <th style="background-color:  #C8AE70;">Total amount</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="consumption-list">
               <tr class="worker-row">
                 <td>1</td>
-                <td>John Doe</td>
-                <td>PDL</td>
-                <td>3</td>
-                <td>2</td>
-                <td>5000 XAF</td>
+                <td>Lisa Rose</td>
+                <td>Maketong</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3000 XAF</td>
               </tr>
               <!-- Ajoute d'autres lignes ici -->
             </tbody>
@@ -256,10 +262,11 @@
 
 </html>
 <script src="../js/index.js"></script>
-<script src="../js/registerworker.js"></script>
 <script src="../js/db.js"></script>
 <script src="../js/depatement.js"></script>
 <script src="../js/consumption.js"></script>
+<script src="../js/WORKER.JS"></script>
+<script src="../js/delete.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {

@@ -1,5 +1,5 @@
 
-/*var departement = ["PDL", "MARKETING", "PRINTING", "MOUNTING", "TYPESETTING", "FINISHING", "ACOUNTAN", "SECURITY", "SCREEN PRINTING", "CANTIN"];
+var departement = ["PDL", "MARKETING", "PRINTING", "MOUNTING", "TYPESETTING", "FINISHING", "ACOUNTAN", "SECURITY", "SCREEN PRINTING", "CANTIN"];
 var description = ["Project Driving Licence", "Manage intrance", "Print Everything", "Mount Before Print", "Apply Form To What To Print", "Finish The Work", "Manage Money", "Insure Company Security", "Screen Printing", "Food Is Ready"];
 
 // Pour chaque departement et une decription on cree un objet
@@ -19,11 +19,11 @@ for (let i = 0; i < departement.length; i++) {
             console.error(`Error adding departement ${departement[i]}: `, addRequest.error);
         };
     };
-}*/
+}
 
 
 function listDepartements() {
-    const request = indexedDB.open("cantisysDb", 1);
+    const request = indexedDB.open("CanteenticketingDb", 1);
     request.onsuccess = function(event) {
         const db = event.target.result;
         const transaction = db.transaction(["departement"], "readonly");
@@ -64,7 +64,7 @@ function listWorkersByDepartement() {
     // Récupère la valeur sélectionnée dans le select
     const selectedDepartement = document.getElementById("departement-consumption").value;
 
-    const request = indexedDB.open("cantisysDb", 1);
+    const request = indexedDB.open("CanteenticketingDb", 1);
     request.onsuccess = function(event) {
         const db = event.target.result;
         const transaction = db.transaction(["workers"], "readonly");

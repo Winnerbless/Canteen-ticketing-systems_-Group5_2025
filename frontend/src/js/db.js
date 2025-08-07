@@ -1,14 +1,12 @@
-let request = indexedDB.open("cantisysDb", 1);
+let request = indexedDB.open("CanteenticketingDb", 1);
 request.onerror = function(event) {
     console.error("Database error: ", event.target.errorCode);
 };
 
 request.onupgradeneeded = function(event) {
     var db = event.target.result;
-    // Crée la table "consumption" si elle n'existe pas
     if (!db.objectStoreNames.contains("consumption")) {
         var objectStore = db.createObjectStore("consumption", { keyPath: "id", autoIncrement: true });
-        objectStore.createIndex("workerId", "workerId", { unique: false });
         objectStore.createIndex("consumerName", "consumerName", { unique: false });
         objectStore.createIndex("departement", "departement", { unique: false });
         objectStore.createIndex("consumptionType", "consumptionType", { unique: false });
