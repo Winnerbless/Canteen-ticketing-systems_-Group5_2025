@@ -21,5 +21,4 @@ function showSection(sectionId) {
 // Afficher Home par défaut au chargement
 document.addEventListener("DOMContentLoaded", function () {
   showSection("home-section");
-  listWorkersByDepartement();
 });

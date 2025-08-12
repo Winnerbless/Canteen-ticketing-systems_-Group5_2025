@@ -1,4 +1,4 @@
-let request = indexedDB.open("cantisysDb", 1);
+let request = indexedDB.open("EatsyDb", 1);
 request.onerror = function (event) {
   console.error("Database error: ", event.target.errorCode);
 };

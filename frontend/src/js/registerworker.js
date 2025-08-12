@@ -1,8 +1,8 @@
-// Fonction pour enregistrer un worker dans IndexedDB et afficher la liste
+// Function to register a worker in IndexedDB and display the list
 function submitWorkersData() {
-  // Récupération des valeurs du formulaire
-  const name = document.getElementById("FirstName").value;
-  const givingName = document.getElementById("LastName").value;
+  // Retrieving from values
+  const name = document.getElementById("name").value;
+  const givingName = document.getElementById("givingName").value;
   const departement = document.getElementById("departement").value;
   const status = document.getElementById("status").value;
   const dob = document.getElementById("dob").value;
@@ -10,8 +10,8 @@ function submitWorkersData() {
   const rgdate = document.getElementById("rgdate").value;
 
   const workersData = {
-    FirstName,
-    LastName,
+    name,
+    givingName,
     departement,
     status,
     dob,
@@ -19,8 +19,8 @@ function submitWorkersData() {
     rgdate,
   };
 
-  // Ajout dans IndexedDB
-  const request = indexedDB.open("cantisysDb", 1);
+  //Adding to IndexDB
+  const request = indexedDB.open("EatsyDb", 1);
   request.onsuccess = function (event) {
     const db = event.target.result;
     const transaction = db.transaction(["workers"], "readwrite");
@@ -28,8 +28,11 @@ function submitWorkersData() {
     const addRequest = objectStore.add(workersData);
 
     addRequest.onsuccess = function () {
-      console.log("Worker added successfully");
-      listWorkers(); // Rafraîchit la liste après ajout
+      Swal.fire({
+        title: "Good Job!",
+        text: "New worker has been registered!",
+        title: "success",
+      });
     };
 
     addRequest.onerror = function () {
@@ -38,12 +41,12 @@ function submitWorkersData() {
   };
 }
 
-// Fonction pour lister et afficher les workers dans le tableau HTML
+// Function to list and display workers in HTML table
 function listWorkers() {
   const table = document.getElementById("workerLists");
-  table.innerHTML = ""; // Vide le tableau avant d'ajouter les lignes
+  table.innerHTML = ""; // Empty the table before adding rows
 
-  const request = indexedDB.open("cantisysDb", 1);
+  const request = indexedDB.open("EatsyDb", 1);
   request.onsuccess = function (event) {
     const db = event.target.result;
     const transaction = db.transaction(["workers"], "readonly");
