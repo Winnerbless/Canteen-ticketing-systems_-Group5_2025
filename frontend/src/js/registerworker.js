@@ -1,7 +1,7 @@
 // Fonction pour enregistrer un worker dans IndexedDB et afficher la liste
 function submitWorkersData() {
   // Récupération des valeurs du formulaire
-  const name = document.getElementById("Name").value;
+  const name = document.getElementById("name").value;
   const givingName = document.getElementById("Surname").value;
   const departement = document.getElementById("departement").value;
   const status = document.getElementById("status").value;
@@ -20,7 +20,7 @@ function submitWorkersData() {
   };
 
   // Ajout dans IndexedDB
-  const request = indexedDB.open("CanteenticketingDb", 1);
+  const request = indexedDB.open("cantisysDb", 1);
   request.onsuccess = function (event) {
     const db = event.target.result;
     const transaction = db.transaction(["workers"], "readwrite");
@@ -43,7 +43,7 @@ function listWorkers() {
   const table = document.getElementById("workerLists");
   table.innerHTML = ""; // Vide le tableau avant d'ajouter les lignes
 
-  const request = indexedDB.open("CanteenticketingDb", 1);
+  const request = indexedDB.open("cantisysDb", 1);
   request.onsuccess = function (event) {
     const db = event.target.result;
     const transaction = db.transaction(["workers"], "readonly");
