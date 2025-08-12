@@ -1,0 +1,17 @@
+/* Style pour l'entête du tableau */
+.worker-table thead tr {
+  background-color: #c8ae70;
+  color: #fff;
+}
+
+/* Style pour la première ligne du tableau */
+.worker-table tbody tr.worker-row {
+  background-color: #edf2fa;
+}
+
+.worker-table tbody tr:nth-child(even) {
+  background-color: #edf2fa;
+}
+.homie {
+  font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
+}
