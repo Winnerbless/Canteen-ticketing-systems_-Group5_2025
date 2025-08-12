@@ -12,6 +12,6 @@
 .worker-table tbody tr:nth-child(even) {
   background-color: #edf2fa;
 }
-.homie {
+* {
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
 }

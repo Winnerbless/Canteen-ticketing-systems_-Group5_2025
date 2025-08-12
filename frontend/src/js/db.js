@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 let request = indexedDB.open("CanteenticketingDb", 1);
+=======
+let request = indexedDB.open("EatsyDb", 1);
+>>>>>>> 29d3df407519f0fef826ca1d57bf54c091b89db2
 request.onerror = function (event) {
   console.error("Database error: ", event.target.errorCode);
 };
