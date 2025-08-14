@@ -3,24 +3,28 @@
 }
 body {
   background: #e4e4e4;
+  overflow: hidden;
+  height: 100%;
 }
 .header {
   background-color: #06373d;
   color: #f3d89a;
   font-weight: 700;
   padding: 10px 20px;
-  height: 100px;
+  height: 80px;
   margin: 0;
   display: flex;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.642);
+  width: 100%;
 }
 .he {
   padding: 7px;
 }
 .sidebar {
   background-color: #2b2d31;
-  height: 100vh;
-  padding: 20px;
+  /* height: 85vh; */
+  min-height: 81vh;
+  padding: 15px;
   position: relative;
   left: -12px;
 }
@@ -47,15 +51,12 @@ body {
 .sidebar a {
   color: #e4e4e4;
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   display: block;
-  width: 220px;
+  width: 200px;
   margin-bottom: 25px;
   text-decoration: none;
   background-color: transparent;
-}
-.sidebar-container {
-  width: 245px;
 }
 .sidebar a:hover {
   border-radius: 5px;
@@ -66,7 +67,7 @@ body {
   color: #edf2fa;
 }
 .date-container p {
-  font-size: 25px;
+  font-size: 18px;
   padding: 2px;
 }
 .date-container {
@@ -91,7 +92,6 @@ body {
   padding: 4px;
 }
 .time {
-  padding: 10px 20px;
   margin: 0;
   margin-left: 40%;
   display: flex;
@@ -136,7 +136,10 @@ body {
   display: flex;
 }
 .content-container {
+  display: flex;
   flex: 1;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .head th {
@@ -193,14 +196,18 @@ span {
 input {
   text-transform: capitalize;
 }
-.footer {
+.foot {
   background: #2b2d31;
   border-top: 4px solid #c8ae70;
   color: #edf2fa;
   padding: 2px 20px;
-  height: 40px;
+  height: 30px;
 }
-.footer span {
+.foot span {
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
   font-size: 15px;
+}
+#foote {
+  left: -12px;
+  width: 100%;
 }

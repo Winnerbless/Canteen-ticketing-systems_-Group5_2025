@@ -47,9 +47,10 @@
         border: 1px solid #f3d89a;
         padding: 10px;
       }
-      .clock :hover {
-        color: #f3d89a;
-        font-size: 25px;
+      .clock:hover {
+        background: #daa520;
+
+        transition: 0.2s, color 0.3s;
       }
       .clock span {
         font-size: 20px;
@@ -58,6 +59,9 @@
         display: inline-block;
         text-align: center;
         position: relative;
+      }
+      .clock span:hover {
+        font-size: 25px;
       }
       #hrs::after {
         content: "Hours";

@@ -79,14 +79,16 @@ function totalPrice() {
   const basePrice = {
     Food: 500,
     Drink: 500,
-    "Food and Drink": 1000,
+    FoodandDrink: 1000,
   };
 
   let totalPrice = basePrice[consumptionType] || 0;
-  if (exta > 0) {
+
+  if (extra > 0) {
     totalPrice += extra * 500; //
   }
-  const _totalPrice = document.getElementById("amount-consumed");
+
+  const _totalPrice = document.getElementById("amount-consummed");
 
   _totalPrice.setAttribute("value", totalPrice + "XAF");
   return totalPrice;
