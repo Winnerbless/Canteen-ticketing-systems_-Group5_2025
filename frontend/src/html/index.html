@@ -36,15 +36,15 @@
            Home
         </a>
         <a href="#" onclick="showSection('worker-list'); listWorkers()" class="sidebar-link">
-          <img src="/Frontend/asset/image/icons/workers table.png" alt="home" class="icons">
+          <img src="/Frontend/asset/image/icons/workers table.png" alt="Worker Table" class="icons">
            Worker table
         </a>
         <a href="#" onclick="showSection('register-consumption');"class="sidebar-link register" >
-          <img src="/Frontend/asset/image/icons/register consumption.png" alt="home" class="icons">
+          <img src="/Frontend/asset/image/icons/register consumption.png" alt="register-consumption" class="icons">
           Register Consumption
         </a>
         <a href="#" onclick="showSection('display-worker-debts'); listConsumption();" class="sidebar-link">
-          <img src="/Frontend/asset/image/icons/user-eating.png" alt="home" class="icons">
+          <img src="/Frontend/asset/image/icons/user-eating.png" alt="register-consumption" class="icons">
            Debts
         </a>
       </nav>
@@ -200,10 +200,16 @@
         <!--Example to be placed in the "worker-list-section" section-->
         <div style="display: block;position: relative;left: 19px;bottom: -32px ;width: 115%;"
           class="container p-2 border rounded bg-light shadow" id="worker-list" style="display: none;">
-          <h2 style="text-align: center; color: #C8AE70;">List Workers</h2>
-          <a href="#" onclick="showSection('register-worker')" class="sidebar-link">
-          <i class="fa fa-user-plus"></i> Register Worker
+          <div style="height: 100px;">
+             <h2 style="text-align: center; color: #C8AE70; padding: 0; margin: 0;">List Workers</h2>
+           <div class="re">
+          <a href="#" onclick="showSection('register-worker')" class="sidebar-link reg" style="background-color: #2b2d31; color: #e4e4e4; width: 40px; border-radius:50px ;
+          height: 38px; padding-left:10px; border-style: none;  ">
+          <img src="/Frontend/asset/image/icons/add new worker.png" alt="home" class="icons">
         </a>
+        <h6 style="font-size: 10px; position: relative;font-weight: 500;">Register worker</h6>
+        </div>
+          </div>
           <table class="table table-bordered worker-table">
             <thead>
               <tr> 

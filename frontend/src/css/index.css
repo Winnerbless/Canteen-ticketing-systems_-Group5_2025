@@ -2,7 +2,6 @@
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
 }
 body {
-  background: #e4e4e4;
   overflow: hidden;
   height: 100%;
 }
@@ -40,7 +39,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   text-decoration: none;
-  font-family: bold;
+  font-style: bold;
 }
 .sidebar-link:hover {
   background: #daa520;
@@ -60,7 +59,7 @@ body {
 }
 .sidebar a:hover {
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 22px;
 }
 .date-container p {
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
@@ -79,6 +78,14 @@ body {
   width: 10px;
   height: 10px;
 }
+.re {
+  margin-left: 800px;
+  margin-top: 0px;
+  padding: 0;
+}
+.reg :hover {
+  background-color: #daa520;
+}
 /* .content-container {
   flex: 1;
   overflow-y: auto;
@@ -95,17 +102,6 @@ body {
   margin: 0;
   margin-left: 40%;
   display: flex;
-}
-.footer {
-  background: #2b2d31;
-  border-top: 4px solid #c8ae70;
-  color: #edf2fa;
-  padding: 2px 20px;
-  height: 40px;
-}
-.footer span {
-  font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
-  font-size: 15px;
 }
 .logo {
   height: 70px;
