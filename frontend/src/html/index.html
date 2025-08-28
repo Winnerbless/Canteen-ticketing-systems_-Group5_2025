@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><link rel="icon" href="/Frontend/asset/logo/eatsy 1 (1).png" type="image/png">EATSY</title>
+    <title>EATSY</title>
+    <link rel="icon" href="/Frontend/asset/logo/eatsy 1 (1).png" type="image/png">
     <!-- links for css and bootstrap -->
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/display-workers.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" class="circular-logo">
   </head>
    <body>
     <!-- The header -->
@@ -49,7 +50,7 @@
         </a>
       </nav>
 <!-- Footer -->
-  <footer class="foot" id="foote"> <span> &copy; 2025 EATSY</span></footer>
+  <!-- <footer class="foot" id="foote"> <span> &copy; 2025 EATSY</span></footer> -->
     </div>
     <!-- Main content in its own div -->
     <div class="content-container">
@@ -77,7 +78,7 @@
               <div class="card-body">
                 <i class="fa fa-coins fa-2x" style="color: #2E4E3F;"></i>
                 <div class="card-title">Total Amount</div>
-                <div  class="card-value"id="totalAmount"></div>
+                <div  class="card-value"id="totalAmountCard"></div>
               </div>
             </div>
           </div>
@@ -205,9 +206,9 @@
            <div class="re">
           <a href="#" onclick="showSection('register-worker')" class="sidebar-link reg" style="background-color: #2b2d31; color: #e4e4e4; width: 40px; border-radius:50px ;
           height: 38px; padding-left:10px; border-style: none;  ">
-          <img src="/Frontend/asset/image/icons/add new worker.png" alt="home" class="icons">
+          <img src="/Frontend/asset/image/icons/add new worker.png" alt="home" class="icons reg">
         </a>
-        <h6 style="font-size: 10px; position: relative;font-weight: 500;">Register worker</h6>
+        <h6 class="tooltip-text">Register worker</h6>
         </div>
           </div>
           <table class="table table-bordered worker-table">

@@ -75,7 +75,7 @@ function listWorkers() {
                     </select>
                 `;
       });
-      console.log("Workers retrieved successfully");
+      console.log("");
     };
 
     getAllRequest.onerror = function () {

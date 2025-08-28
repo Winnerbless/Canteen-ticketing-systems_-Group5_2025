@@ -2,9 +2,17 @@
   font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
 }
 body {
-  overflow: hidden;
-  height: 100%;
+  /* overflow: hidden;
+  height: 100%; */
 }
+.circular-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
 .header {
   background-color: #06373d;
   color: #f3d89a;
@@ -21,8 +29,9 @@ body {
 }
 .sidebar {
   background-color: #2b2d31;
-  /* height: 85vh; */
-  min-height: 81vh;
+  /* height: 85vh; 
+  min-height: 81vh; */
+  height: 200%;
   padding: 15px;
   position: relative;
   left: -12px;
@@ -82,9 +91,37 @@ body {
   margin-left: 800px;
   margin-top: 0px;
   padding: 0;
+  position: relative;
+  display: inline-block;
 }
+.tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.re:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 .reg :hover {
-  background-color: #daa520;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
 }
 /* .content-container {
   flex: 1;
@@ -122,10 +159,10 @@ body {
   margin-right: 10px;
 }
 
-#register-worker {
+/* #register-worker {
   position: relative;
   bottom: -32px;
-}
+} */
 
 /* Ajoute dans index.css */
 .container-fluid {

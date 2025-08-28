@@ -27,7 +27,7 @@ function registerConsumption() {
     addRequest.onsuccess = function () {
       Swal.fire({
         title: "Good Job!",
-        text: "New worker has been registered!",
+        text: "New Consumption has been registered!",
         title: "success",
       }); // Rafraîchit la liste après ajout
     };

@@ -42,3 +42,34 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Error opening IndexedDB:", event.target.error);
   };
 });
+document.addEventListener("DOMContentLoaded", () => {
+  let request = indexedDB.open("EatsyDb", 1); // use your DB name
+
+  request.onsuccess = function (event) {
+    let db = event.target.result;
+
+    // open transaction on the store where consumptions are saved
+    let transaction = db.transaction(["consumption"], "readonly");
+    let store = transaction.objectStore("consumption");
+
+    let getAllRequest = store.getAll();
+
+    getAllRequest.onsuccess = function (event) {
+      let data = event.target.result;
+
+      // Sum all "Total amount" values
+      let total = data.reduce((sum, record) => {
+        // because your field is called "Total amount" (with a space):
+        let rawAmount = record["amount"];
+
+        // remove any non-digits like "XAF"
+        let amount = parseInt(rawAmount.toString().replace(/\D/g, ""), 10);
+
+        return sum + (isNaN(amount) ? 0 : amount);
+      }, 0);
+
+      // update the home page card
+      document.getElementById("totalAmountCard").textContent = total + " XAF";
+    };
+  };
+});
